@@ -1,0 +1,30 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --container-giant-width: 100%;
+  --container-med-width: 100%;
+  --container-med-maxwidth: 400px;
+}
+
+img {
+  width: 100%;
+}
+
+.container-g {
+  width: var(--container-giant-width);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=main.css.map */

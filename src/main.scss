@@ -1,0 +1,29 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --container-giant-width: 100%;
+    --container-med-width: 100%;
+    --container-med-maxwidth: 400px; 
+}
+body{
+    // background-color: red;
+}
+img{
+    width: 100%;
+}
+.container-g{
+    width: var(--container-giant-width);
+}
+// .container-pd{
+//     padding: ;
+// }
+// .container-med{
+//     width: ;
+// }
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
