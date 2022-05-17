@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
 *,
 ::before,
 ::after{
@@ -6,12 +7,46 @@
     box-sizing: border-box;
 }
 :root{
+    --font-size :16px;
     --container-giant-width: 100%;
     --container-med-width: 100%;
-    --container-med-maxwidth: 400px; 
+    --container-med-maxwidth: 400px;
+    --container-pd : 2rem 0;
+
+    --font-overpass: 'Overpass';
+    --font-ubuntu: 'Ubuntu';
+
+    // ### Primary
+    // (CTA text)
+    --light-red: hsl(356, 100%, 66%);
+    // (CTA hover background)
+    --very-light-red: hsl(355, 100%, 74%);
+    // (headings)
+    --very-dark-blue : hsl(208, 49%, 24%);
+
+    // ### Neutral
+    // (text)
+    --white: hsl(0, 0%, 100%);
+    // (footer text)
+    --grayish-blue: hsl(240, 2%, 79%);
+    // (body copy)
+    --very-dark-grayish-blue: hsl(207, 13%, 34%);
+    // (footer background)
+    --very-dark-black-blue: hsl(240, 10%, 16%);
+
+    // Background gradient - Intro/CTA mobile nav:
+
+    --very-light-red: hsl(13, 100%, 72%);
+    --light-red: hsl(353, 100%, 62%);
+
+    // Background gradient - body:
+
+    --very-dark-gray-blue: hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue: hsl(237, 23%, 32%);
 }
 body{
-    // background-color: red;
+    font-family: var(--font-overpass);
+    font-size: var(--font-size);
 }
 img{
     width: 100%;
@@ -19,11 +54,30 @@ img{
 .container-g{
     width: var(--container-giant-width);
 }
-// .container-pd{
-//     padding: ;
-// }
-// .container-med{
-//     width: ;
-// }
+.container-pd{
+    padding: var(--container-pd);
+}
+.container-med{
+    width: var(--container-med-width);
+    max-width: var(--container-med-maxwidth);
+}
+.color-light-red{
+    color: var(--light-red);
+}
+.color-dark-blue{
+    color: var(--very-dark-blue);
+}
+.color-white{
+    color: var(--white);
+}
+.color-grayish-blue{
+    color: var(--grayish-blue);
+}
+.color-dark-blue{
+    color: var(--very-dark-grayish-blue);
+}
+.color-darken-blue{
+    color: var(--very-dark-black-blue);
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
