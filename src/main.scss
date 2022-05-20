@@ -337,7 +337,7 @@ h3{
         justify-content: center;
         border-radius: 0 125px 0 125px;
         position: relative;
-        background-image: url(/public/bg-pattern-circles.svg);
+        background-image: url(../bg-pattern-circles.svg);
         background-position: center -200px;
         background-size: 120%;
         background-repeat: no-repeat;
@@ -457,7 +457,7 @@ h3{
         --font-ubuntu: 'Ubuntu';
     }
     .header{
-        background: no-repeat url(/public/bg-pattern-intro-desktop.svg),-webkit-linear-gradient(left, var(--very-light-red)0%, var(--light-red) 100%);
+        background: no-repeat url(../bg-pattern-intro-desktop.svg),-webkit-linear-gradient(left, var(--very-light-red)0%, var(--light-red) 100%);
         background-position: 35% 40%;
         .header_content{
             height: 70%;
@@ -500,7 +500,7 @@ h3{
             justify-content: center;
             border-radius: 0 125px 0 125px;
             position: relative;
-            background-image: url(/public/bg-pattern-circles.svg);
+            background-image: url(../bg-pattern-circles.svg);
             background-repeat: no-repeat;
             background-position: -400px -400px;
             background-size: 900px;
