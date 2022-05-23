@@ -93,7 +93,7 @@ img {
 }
 
 .header {
-  background: no-repeat url(/public/bg-pattern-intro-mobile.svg), -webkit-linear-gradient(left, var(--very-light-red) 0%, var(--light-red) 100%);
+  background: no-repeat url(../bg-pattern-intro-mobile.svg), -webkit-linear-gradient(left, var(--very-light-red) 0%, var(--light-red) 100%);
   background-position: 35% 40%;
   position: relative;
   display: flex;
