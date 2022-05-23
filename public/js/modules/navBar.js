@@ -1,5 +1,6 @@
 export default function menu(btn,navMenu,aMenu,flechaChange){
     const d = document;
+    const w = window;
     d.addEventListener('click',e=>{
         if(e.target.matches(btn) || e.target.matches(`${btn} *`)){
             d.querySelector(navMenu).classList.toggle("menu-open")
@@ -18,8 +19,36 @@ export default function menu(btn,navMenu,aMenu,flechaChange){
                 height = subMenu.scrollHeight;
             }
             subMenu.style.height = `${height}px`
-            console.log(subMenu)
-            console.log(e.target.classList)
+            let arrow = aMenuClick.children[0];
+            arrow.classList.toggle("arrow-change")
         })
+    })
+
+    let flecha = d.querySelectorAll(flechaChange);
+        let flechaA = Array.from(flecha)
+        if(innerWidth >  991){
+        console.log(flechaA)
+        flechaA.forEach(flechas=>{
+            flechas.setAttribute('stroke','#fff')
+        })
+        }else{
+            flechaA.forEach(flechas=>{
+                flechas.setAttribute('stroke','#FF7B86')
+            })
+        }
+    w.addEventListener('resize',(e)=>{
+        console.log(innerWidth)
+        let flecha = d.querySelectorAll(flechaChange);
+        let flechaA = Array.from(flecha)
+        if(innerWidth >  991){
+        console.log(flechaA)
+        flechaA.forEach(flechas=>{
+            flechas.setAttribute('stroke','#fff')
+        })
+        }else{
+            flechaA.forEach(flechas=>{
+                flechas.setAttribute('stroke','#FF7B86')
+            })
+        }
     })
 }

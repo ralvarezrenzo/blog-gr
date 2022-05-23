@@ -107,6 +107,7 @@ img{
         display: flex;
         justify-content: center;
         height: 150px;
+        padding: 50px 0;
         position: relative;
         // background-color: red;
         .nav_content{
@@ -180,6 +181,10 @@ img{
                         .arrow{
                             display: inline-block;
                             width: 1rem;
+                            transition-duration: .5s;
+                        }
+                        .arrow-change{
+                            transform: rotate(-180deg);
                         }
                     }
                     .submenu{
@@ -268,14 +273,24 @@ img{
                 font-size: 1.3rem;
                 font-family: var(--font-ubuntu);
                 font-weight: 700;
+                transition-duration: .5s;
             }
             a:nth-child(1){
                 background-color: var(--white);
                 color: var(--light-red);
+                &:hover{
+                    background-color: var(--light-red);
+                    color: var(--white);
+                }
             }
             a:nth-child(2){
                 color: var(--white);
                 border: 1px solid white;
+                &:hover{
+                    background-color: var(--light-red);
+                    color: var(--white);
+                    border-color: transparent;
+                }
             }
         }
     }
@@ -459,6 +474,90 @@ h3{
     .header{
         background: no-repeat url(../bg-pattern-intro-desktop.svg),-webkit-linear-gradient(left, var(--very-light-red)0%, var(--light-red) 100%);
         background-position: 35% 40%;
+
+        // Header navegacion logo btn y menu
+        .nav{
+            // background-color: red;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+            .nav_content{
+                width: 100px;
+                // background: blue;
+                align-items: flex-start;
+                padding-top: 9px;
+                .btn-box{
+                    display: none;
+                }
+            }    
+            .menu-box{
+                width: 800px;
+                position: initial;
+                clip-path: initial;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                background: transparent;
+                .nav_menu{
+                    width: 50%;
+                    padding: 20px 0;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    // background: black;
+                    .nav_li{
+                        // background: blue;
+                        gap: 1rem;
+                        align-items: flex-start;
+                        .nav_a{
+                            color: var(--white);
+                            text-align: left;
+                            .arrow{
+                                // background: var(--white);
+                                color: var(--white);
+                            }
+                        }
+                        .submenu{
+                            align-items: flex-start;
+                            overflow: hidden;
+                            .submenu_a{
+                                padding: 1rem;
+                                justify-content: flex-start;
+                                font-weight: 300;
+                                &:hover{
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+                .menu_social{
+                    width: 40%; 
+                    padding: 0;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    border-color: transparent;
+                    a:nth-child(1){
+                        color: var(--white);
+                        &:hover{
+                            background-color: var(--light-red);
+                            color: var(--white);
+                        }
+                    }
+                    a:nth-child(2){
+                        color: var(--light-red);
+                        background: var(--white);
+                        &:hover{
+                            background-color: var(--light-red);
+                            color: var(--white);
+                        }
+                    }
+                }
+            }        
+        }
+
+        // Header contenido titulos
         .header_content{
             height: 70%;
             display: flex;
@@ -571,4 +670,11 @@ h3{
     :root{
         --container-med-maxwidth: 1200px;
     }   
+    .header{
+        .nav{
+            .menu-box{
+                width: 1000px;
+            }
+        }
+    }
 }
